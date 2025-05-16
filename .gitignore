@@ -2,6 +2,8 @@
 
 docker
 
+note-spsp.pem
+
 # compiled output
 /backend/dist
 /backend/node_modules
