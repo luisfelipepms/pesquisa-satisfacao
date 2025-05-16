@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  login     String   @unique @default("null")
+  password  String
+  createdAt DateTime @default(now())
+  surveys   Survey[]
+}
+
+model Survey {
+  id        Int      @id @default(autoincrement())
+  title     String
+  userId    Int
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  answers Answer[]
+
+  @@index([userId], map: "Survey_userId_fkey")
+}
+
+model Answer{
+  id Int @id @default(autoincrement())
+  surveyId Int
+  resposta String
+  createdAt DateTime @default(now())
+  survey Survey @relation(fields: [surveyId], references: [id])
+
+  @@index([surveyId], map: "Resposta_surveyId_fkey")
+
+}

@@ -1,0 +1,50 @@
+/* Layout geral */
+.layout-container {
+    display: flex;
+    height: 100vh; /* 100% da altura da tela */
+  }
+  
+  /* Sidebar lateral */
+  .sidebar {
+    background-color: #424242;
+    color: #f1ecec;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-direction: column;
+  }
+
+  .logo{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Área principal (navbar + conteúdo) */
+  .main-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ocupa o restante do espaço */
+  }
+  
+  /* Navbar na parte superior */
+  .navbar {
+    height: 40px;
+    background-color: #424242;
+    color: white;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 24px;
+  }
+  
+  /* Conteúdo principal */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    overflow-y: auto;
+  }
+  
