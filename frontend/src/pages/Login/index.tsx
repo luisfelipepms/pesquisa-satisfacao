@@ -45,7 +45,7 @@ export default function Login(){
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-          <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Entrar</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Pesquisa de Satisfação</h2>
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
