@@ -33,4 +33,4 @@ jobs:
 
       - name: Upload build to EC2
         run: |
-          rsync -avz -e "ssh -o StrictHostKeyChecking=no" frontend/dist/ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/pesquisa-satisfacao-app/frontend
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no" frontend/dist/ ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/pesquisa-satisfacao-app/frontend/dist
