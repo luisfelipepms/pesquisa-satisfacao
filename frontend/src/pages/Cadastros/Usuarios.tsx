@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react"
+import { useState } from "react"
 
 export default function Usuarios(){
     const [nome, setNome] = useState<string>("");
