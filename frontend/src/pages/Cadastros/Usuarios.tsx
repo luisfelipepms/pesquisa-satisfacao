@@ -6,10 +6,7 @@ export default function Usuarios(){
     const [login, setLogin] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
-    const handleCadastro = async(e:FormEvent) =>{
-        e.preventDefault();
-        
-    }
+    
 
     return(
     <div className="grid grid-cols-6">
