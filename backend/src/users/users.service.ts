@@ -13,6 +13,7 @@ export class UsersService {
             data: {
                 name: data.name,
                 email: data.email,
+                login: data.login,
                 password: hashedPassword,
             },
         });
